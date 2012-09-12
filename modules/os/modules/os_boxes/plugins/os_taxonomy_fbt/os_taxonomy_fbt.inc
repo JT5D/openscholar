@@ -14,6 +14,17 @@ class os_taxonomy_fbt extends os_boxes_default {
   public function options_defaults() {
     $options = parent::options_defaults();
 
+    $options['vocabulary'] = false;
+    $options['views'] = false;
+    $options['bundles'] = '--all--';
+    $options['range'] = 10;
+    $options['offset'] = 0;
+    $options['show_empty_terms'] = false;
+    $options['terms_description'] = false;
+    $options['show_childs'] = true;
+    $options['add_childs'] = false;
+    $options['depth'] = 0;
+
     return $options;
   }
 
