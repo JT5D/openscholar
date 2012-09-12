@@ -158,13 +158,12 @@ class os_taxonomy_fbt extends os_boxes_default {
     }
 
     $block = parent::render();
-    $block['content'] = "Filter By Category Block [STUB]";
     // For now - display the first vocabulary terms.
     if (isset($this->options['settings']['bundles']['--all--'])) {
       $this->options['settings']['bundles'] = array();
     }
 
-    $block['content'] .= theme('volcabulary_term_list', array(
+    $block['content'] = theme('volcabulary_term_list', array(
       'vid' => $this->options['settings']['vocabulary'],
       'options' => $this->options['settings'],
     ));
